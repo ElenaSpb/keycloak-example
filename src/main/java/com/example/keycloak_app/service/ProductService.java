@@ -7,7 +7,10 @@ import java.util.List;
 
 @Service
 public class ProductService {
-    public List<String> getProducts() {
+    public List<String> getPublicProducts() {
         return Arrays.asList("iPad", "iPod", "iPhone");
+    }
+    public List<String> getPrivateProducts() {
+        return Arrays.asList("Вятка", "Победа");
     }
 }
