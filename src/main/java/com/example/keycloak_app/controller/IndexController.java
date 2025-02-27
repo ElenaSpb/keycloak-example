@@ -1,7 +1,5 @@
 package com.example.keycloak_app.controller;
 
-import jakarta.servlet.ServletException;
-import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,7 +13,6 @@ public class IndexController {
 
     @GetMapping(path = "/")
     public HashMap index() {
-        // get a successful user login
         OAuth2User user = ((OAuth2User) SecurityContextHolder.getContext().getAuthentication().getPrincipal());
         return new HashMap() {{
             put("hello", user.getAttribute("name"));
@@ -24,16 +21,8 @@ public class IndexController {
     }
 
     @GetMapping(path = "/unauthenticated")
-    public HashMap unauthenticatedRequests() {
-        return new HashMap() {{
-            put("this is ", "unauthenticated endpoint");
-        }};
-    }
-
-    @GetMapping(path = "/logout")
-    public String logout(HttpServletRequest request) throws ServletException {
-        request.logout();
-        return "/";
+    public String unauthenticatedRequests() {
+        return "this is unauthenticated endpoint";
     }
 
     @GetMapping(path = "/cats")
