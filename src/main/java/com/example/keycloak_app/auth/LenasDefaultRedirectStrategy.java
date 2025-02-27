@@ -25,7 +25,7 @@ public class LenasDefaultRedirectStrategy implements RedirectStrategy {
         }
         // for first AUTH redirect on {host}/Intra/oauth2/authorization/keycloak
         // to fix ajax cross-domain FE issue about impossible redirect by 302 http status
-        if (redirectUrl.contains("/oauth2/authorization/keycloak")) {
+        if (redirectUrl.contains("/oauth2/authorization/lenas-realm")) {
             response.setStatus(401);
             response.getWriter().write(redirectUrl);
             response.flushBuffer();
