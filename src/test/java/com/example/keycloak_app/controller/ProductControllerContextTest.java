@@ -11,7 +11,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.mock.web.MockHttpServletResponse;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
-import org.springframework.test.web.reactive.server.WebTestClient;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.List;
@@ -40,8 +39,6 @@ public class ProductControllerContextTest {
     // This object will be initialized thanks to @AutoConfigureJsonTesters
     @Autowired
     private JacksonTester<String> jsonWriter;
-
-    private WebTestClient webTestClient;
 
     @Test
     @WithMockLenasUser
