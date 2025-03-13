@@ -29,6 +29,9 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 
+/**
+ * Spring MockMVC example in Standalone Mode, without loading a Spring context.
+ */
 @ExtendWith(MockitoExtension.class)
 public class ProductControllerUnitTest {
 
