@@ -8,6 +8,6 @@ import java.lang.annotation.RetentionPolicy;
 @Retention(RetentionPolicy.RUNTIME)
 @WithSecurityContext(factory = WithMockLenasUserSecurityContextFactory.class)
 public @interface WithMockLenasUser {
-    String name() default "Test User";
+    String name() default "admin";
     String permissions() default "some";
 }
