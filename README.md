@@ -1,1 +1,1 @@
-Code example for arcitvle https://habr.com/ru/articles/884358/ 
+Code example for arcticle https://habr.com/ru/articles/884358/ 
